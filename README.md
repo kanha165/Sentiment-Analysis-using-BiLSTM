@@ -27,6 +27,29 @@ https://www.kaggle.com/code/kanhapatidar/sentiment-analysis/notebook
 
 ---
 
+# 📌 Important Note
+
+Due to GitHub file size limitations, the following files are not included in this repository:
+
+- `data.csv`
+- `sentiment_model.h5`
+- `tokenizer.pkl`
+
+These files are large in size and can be downloaded directly from the Kaggle notebook provided above.
+
+The notebook contains:
+
+- Complete training pipeline
+- Dataset preprocessing
+- Model training
+- Saved model generation
+- Tokenizer creation
+- Full implementation code
+
+You can easily generate or download all required files from the notebook.
+
+---
+
 # 📌 Features
 
 ✅ Real-time Sentiment Prediction  
@@ -87,7 +110,6 @@ Prediction Response
 
 ```text
 AI-Sentiment-Analyzer/
-│
 │
 ├── data.csv
 │
@@ -171,6 +193,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 Use VS Code Live Server extension or open `index.html`.
 
 ---
+
 
 
 ---
