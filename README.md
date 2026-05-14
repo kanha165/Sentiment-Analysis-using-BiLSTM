@@ -13,6 +13,20 @@ This project includes:
 
 ---
 
+# 🔗 Project Links
+
+## 🌐 GitHub Repository
+
+https://github.com/kanha165/Sentiment-Analysis-using-BiLSTM
+
+---
+
+## 📘 Kaggle Notebook
+
+https://www.kaggle.com/code/kanhapatidar/sentiment-analysis/edit/run/318889741
+
+---
+
 # 📌 Features
 
 ✅ Real-time Sentiment Prediction  
@@ -72,15 +86,25 @@ Prediction Response
 # 📁 Project Structure
 
 ```text
-sentiment-analysis/
+AI-Sentiment-Analyzer/
+│
+├── __pycache__/
+│
+├── data.csv
+│
+├── index.html
 │
 ├── main.py
-├── index.html
+│
 ├── sentiment_model.h5
+│
+├── sentiment-analysis.ipynb
+│
 ├── tokenizer.pkl
-├── requirements.txt
-├── runtime.txt
-└── README.md
+│
+├── sentiment.png
+│
+└── sentiment-NEGATIVE.png
 ```
 
 ---
@@ -90,7 +114,7 @@ sentiment-analysis/
 ## 1. Clone Repository
 
 ```bash
-git clone YOUR_GITHUB_REPO_URL
+git clone https://github.com/kanha165/Sentiment-Analysis-using-BiLSTM.git
 ```
 
 ---
@@ -98,7 +122,7 @@ git clone YOUR_GITHUB_REPO_URL
 ## 2. Open Project Folder
 
 ```bash
-cd sentiment-analysis
+cd Sentiment-Analysis-using-BiLSTM
 ```
 
 ---
@@ -149,7 +173,21 @@ Use VS Code Live Server extension or open `index.html`.
 
 ---
 
+# ☁️ Cloudflare Live Deployment
 
+## Backend Tunnel
+
+```bash
+cloudflared tunnel --url http://127.0.0.1:8000
+```
+
+---
+
+## Frontend Tunnel
+
+```bash
+cloudflared tunnel --url http://127.0.0.1:5500
+```
 
 ---
 
@@ -260,8 +298,6 @@ This AI project is absolutely amazing
 ```text
 The application is terrible and frustrating
 ```
-
-
 
 ---
 
