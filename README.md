@@ -275,25 +275,7 @@ This AI project is absolutely amazing
 The application is terrible and frustrating
 ```
 
----
 
-## Mixed
-
-```text
-The food was delicious but delivery was slow
-```
-
----
-
-# 📸 Screenshots
-
-Add screenshots here:
-
-- Frontend UI
-- Prediction Result
-- Training Graph
-- Confusion Matrix
-- Swagger API
 
 ---
 
