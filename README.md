@@ -23,7 +23,7 @@ https://github.com/kanha165/Sentiment-Analysis-using-BiLSTM
 
 ## 📘 Kaggle Notebook
 
-https://www.kaggle.com/code/kanhapatidar/sentiment-analysis/edit/run/318889741
+https://www.kaggle.com/code/kanhapatidar/sentiment-analysis/notebook
 
 ---
 
@@ -88,7 +88,6 @@ Prediction Response
 ```text
 AI-Sentiment-Analyzer/
 │
-├── __pycache__/
 │
 ├── data.csv
 │
@@ -173,21 +172,6 @@ Use VS Code Live Server extension or open `index.html`.
 
 ---
 
-# ☁️ Cloudflare Live Deployment
-
-## Backend Tunnel
-
-```bash
-cloudflared tunnel --url http://127.0.0.1:8000
-```
-
----
-
-## Frontend Tunnel
-
-```bash
-cloudflared tunnel --url http://127.0.0.1:5500
-```
 
 ---
 
