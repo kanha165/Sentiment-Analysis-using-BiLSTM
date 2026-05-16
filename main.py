@@ -16,6 +16,8 @@ import nltk
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+import gdown
+import os
 
 # ===============================
 # DOWNLOAD NLTK FILES
@@ -57,8 +59,15 @@ app.add_middleware(
 # ===============================
 # LOAD MODEL
 # ===============================
+MODEL_PATH = "sentiment_model.h5"
 
-model = load_model("sentiment_model.h5")
+if not os.path.exists(MODEL_PATH):
+
+    url = "https://drive.google.com/uc?id=1PjMKDtoSHHRoCCuVfUGS7Zvdrl_rJDu-"
+
+    gdown.download(url, MODEL_PATH, quiet=False)
+
+model = load_model(MODEL_PATH)
 
 # ===============================
 # LOAD TOKENIZER
