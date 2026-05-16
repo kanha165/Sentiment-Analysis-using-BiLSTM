@@ -3,7 +3,7 @@ uvicorn
 jinja2
 tensorflow==2.19.0
 Keras==3.10.0
-numpy==1.23.5
+numpy==1.26.4
 pandas
 scikit-learn
 nltk
