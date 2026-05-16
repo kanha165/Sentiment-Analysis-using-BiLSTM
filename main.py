@@ -66,7 +66,7 @@ if not os.path.exists(MODEL_PATH):
 
     url = "https://drive.google.com/uc?export=download&id=1PjMKDtoSHHRoCCuVfUGS7Zvdrl_rJDu-"
 
-    gdown.download(url, MODEL_PATH, quiet=False, fuzzy=True)
+    gdown.download(url, MODEL_PATH, quiet=False)
 
 # ===============================
 # LOAD MODEL
