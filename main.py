@@ -85,7 +85,7 @@ InputLayer.__init__ = patched_input_layer_init
 # LOAD MODEL
 # ===============================
 
-model = load_model(MODEL_PATH)
+model = load_model(MODEL_PATH, compile=False)
 
 # ===============================
 # LOAD TOKENIZER
