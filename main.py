@@ -353,10 +353,9 @@ def predict(data: SentimentRequest):
 
     confidence = float(prediction)
 
-    return {
-        "input_text": data.text,
-        "cleaned_text": cleaned_text,
-        "sentiment": sentiment,
-        "confidence_score": round(confidence, 4)
-
-    }
+return {
+    "input_text": data.text,
+    "cleaned_text": cleaned_text,
+    "sentiment": sentiment,
+    "confidence_score": round(confidence, 4)
+}
