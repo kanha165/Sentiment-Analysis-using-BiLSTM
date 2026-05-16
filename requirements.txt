@@ -1,8 +1,8 @@
 fastapi
 uvicorn
 jinja2
-TensorFlow: 2.19.0
-Keras: 3.10.0
+tensorflow==2.19.0
+Keras==3.10.0
 numpy==1.23.5
 pandas
 scikit-learn
