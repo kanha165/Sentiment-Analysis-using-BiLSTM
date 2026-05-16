@@ -63,10 +63,12 @@ app.add_middleware(
 MODEL_PATH = "sentiment_model.h5"
 
 if not os.path.exists(MODEL_PATH):
-
     url = "https://drive.google.com/uc?id=1PjMKDtoSHHRoCCuVfUGS7Zvdrl_rJDu-"
-
     gdown.download(url, MODEL_PATH, quiet=False)
+
+from tensorflow.keras.models import load_model
+
+model = load_model(MODEL_PATH, compile=False)
 
 # ===============================
 # LOAD MODEL
