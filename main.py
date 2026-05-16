@@ -323,28 +323,22 @@ def health():
 # ===============================
 # PREDICTION API
 # ===============================
-
 @app.post("/predict")
 def predict(data: SentimentRequest):
 
-    # clean text
     cleaned_text = clean_text(data.text)
 
-    # text to sequence
     sequence = tokenizer.texts_to_sequences(
         [cleaned_text]
     )
 
-    # padding
     padded = pad_sequences(
         sequence,
         maxlen=MAX_LEN
     )
 
-    # prediction
     prediction = model.predict(padded)[0][0]
 
-    # sentiment
     sentiment = (
         "Positive Sentiment"
         if prediction > 0.5
@@ -353,9 +347,9 @@ def predict(data: SentimentRequest):
 
     confidence = float(prediction)
 
-return {
-    "input_text": data.text,
-    "cleaned_text": cleaned_text,
-    "sentiment": sentiment,
-    "confidence_score": round(confidence, 4)
-}
+    return {
+        "input_text": data.text,
+        "cleaned_text": cleaned_text,
+        "sentiment": sentiment,
+        "confidence_score": round(confidence, 4)
+    }
