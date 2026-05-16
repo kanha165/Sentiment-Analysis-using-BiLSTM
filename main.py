@@ -68,7 +68,7 @@ if not os.path.exists(MODEL_PATH):
 
 from tensorflow.keras.models import load_model
 
-model = load_model(MODEL_PATH, compile=False)
+model = load_model(MODEL_PATH, compile=False,safe_mode=False)
 
 # ===============================
 # LOAD MODEL
