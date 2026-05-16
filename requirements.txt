@@ -8,3 +8,4 @@ scikit-learn
 nltk
 python-multipart
 gdown
+tensorflow==2.15.0
