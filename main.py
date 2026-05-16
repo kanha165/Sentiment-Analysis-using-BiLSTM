@@ -64,11 +64,22 @@ MODEL_PATH = "sentiment_model.h5"
 
 if not os.path.exists(MODEL_PATH):
     url = "https://drive.google.com/uc?id=1PjMKDtoSHHRoCCuVfUGS7Zvdrl_rJDu-"
-    gdown.download(url, MODEL_PATH, quiet=False)
+    gdown.download(url, MODEL_PATH, quiet=False, fuzzy=True)
 
-from tensorflow.keras.models import load_model
+# ==========================================
+# 🔥 KERAS BATCH_SHAPE ERROR FIX PATCH
+# ==========================================
+from keras.layers import InputLayer
+original_input_layer_init = InputLayer.__init__
 
-model = load_model(MODEL_PATH, compile=False,safe_mode=False)
+def patched_input_layer_init(self, *args, **kwargs):
+    if 'batch_shape' in kwargs:
+        kwargs['shape'] = kwargs.get('shape', kwargs['batch_shape'][1:])
+        kwargs.pop('batch_shape', None)
+    original_input_layer_init(self, *args, **kwargs)
+
+InputLayer.__init__ = patched_input_layer_init
+# ==========================================
 
 # ===============================
 # LOAD MODEL
